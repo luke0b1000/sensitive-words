@@ -1,0 +1,42 @@
+{
+    "name": "sensitive-words-luke",
+    "version": "1.0.0",
+    "description": "Filter out a list of sensitive words",
+    "main": "build/index.js",
+    "scripts": {
+        "dev": "watch 'npm run build' src",
+        "build": "babel src -d build",
+        "test": "jest",
+        "test:watch": "npm test -- --watch",
+        "prepublish": "npm run build",
+        "release": "np patch"
+    },
+    "babel": {
+        "presets": [
+            "latest"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/luke0b1000/sensitive-words.git"
+    },
+    "keywords": [
+        "filter",
+        "filtering",
+        "sensitive",
+        "words"
+    ],
+    "author": "Luke Guan",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/luke0b1000/sensitive-words/issues"
+    },
+    "homepage": "https://github.com/luke0b1000/sensitive-words#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-latest": "^6.24.1",
+        "jest": "^23.6.0",
+        "np": "^3.0.4",
+        "watch": "^1.0.2"
+    }
+}
